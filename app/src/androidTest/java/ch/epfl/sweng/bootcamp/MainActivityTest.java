@@ -1,6 +1,5 @@
 package ch.epfl.sweng.bootcamp;
 
-import android.support.test.espresso.action.ViewActions;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -10,6 +9,7 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
@@ -21,7 +21,7 @@ public class MainActivityTest {
 
     @Test
     public void testCanGreetUsers() {
-        onView(withId(R.id.mainName)).perform(typeText("from my unit test")).perform(ViewActions.closeSoftKeyboard());
+        onView(withId(R.id.mainName)).perform(typeText("from my unit test")).perform(closeSoftKeyboard());
         onView(withId(R.id.mainGoButton)).perform(click());
         // onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
