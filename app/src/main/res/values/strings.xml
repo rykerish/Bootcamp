@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Bootcamp</string>
-    <string name="mainName">Please write here</string>
     <string name="mainGoButton">Press here to start</string>
     <string name="hello">Hello world!</string>
 </resources>
